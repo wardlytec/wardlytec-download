@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>تحميل تطبيق وردلي تك – توريد وشحن بدون تعقيد</title>
+  <meta name="description" content="نزّل تطبيق وردلي تك للمندوبين في مصر. توريد الأموال وشحن الرصيد بسهولة وأمان.">
+  <meta name="theme-color" content="#ff5100">
+  <!-- Open Graph -->
+  <meta property="og:title" content="تحميل تطبيق وردلي تك"/>
+  <meta property="og:description" content="توريد الأموال وشحن الرصيد بسهولة وأمان."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="ar_EG"/>
+  <meta property="og:image" content="photo_1.jpg"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --brand-1:#ff5100;
+      --brand-2:#ff6a00;
+
+      /* Dark (default) */
+      --bg:#0f0f12;
+      --card:#17171b;
+      --text:#f1f1f1;
+      --muted:#cfcfcf;
+      --border: rgba(255,255,255,.06);
+    }
+    body.light{
+      --bg:#ffffff;
+      --card:#f5f5f5;
+      --text:#222222;
+      --muted:#555555;
+      --border: rgba(0,0,0,.08);
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:'Cairo',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      background:
+        radial-gradient(1200px 500px at 80% -10%, rgba(255,81,0,.15), transparent 60%),
+        radial-gradient(900px 400px at 0% 0%, rgba(255,106,0,.12), transparent 65%),
+        var(--bg);
+      color:var(--text); line-height:1.8;
+      transition: background .3s, color .3s;
+    }
+    a{color:inherit; transition: color .3s}
+    .container{max-width:1100px; margin:0 auto; padding-inline:20px}
+
+    /* ====== Header ====== */
+    header{
+      position:sticky; top:0; z-index:20; backdrop-filter:saturate(180%) blur(10px);
+      background:linear-gradient(to left, rgba(255,81,0,.12), rgba(255,106,0,.12));
+      border-bottom:1px solid var(--border);
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 0}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px}
+    .logo{width:40px; height:40px; border-radius:10px; overflow:hidden; border:2px solid var(--brand-1)}
+    .logo img{width:100%; height:100%; object-fit:cover}
+    .nav a.btn{padding:10px 16px; background:linear-gradient(135deg,var(--brand-1),var(--brand-2)); color:#fff; border-radius:12px; text-decoration:none; font-weight:700; box-shadow:0 10px 24px rgba(255,81,0,.25)}
+    .nav a.link{color:var(--text); opacity:.9; text-decoration:none; font-weight:700}
+
+    /* زر الوضع */
+    .theme-toggle{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.08);
+      color:var(--text);
+      font-size:16px;
+      padding:8px 14px;
+      border-radius:8px;
+      cursor:pointer;
+      transition: background .3s, color .3s, border-color .3s;
+    }
+    body.light .theme-toggle{ background:rgba(0,0,0,.06); }
+
+    /* ====== Hero ====== */
+    .hero{padding:56px 0 32px}
+    .hero .wrap{display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:center}
+    .badge{display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border:1px solid var(--border); border-radius:999px; font-size:13px; background:rgba(255,255,255,.03)}
+    h1{font-size:34px; margin:12px 0 10px}
+    .lead{font-size:18px; color:var(--muted); margin:0 0 22px}
+    .actions{display:flex; flex-wrap:wrap; gap:12px; align-items:center}
+    .btn{display:inline-flex; align-items:center; gap:10px; padding:14px 18px; border-radius:14px; text-decoration:none; font-weight:800; border:1px solid var(--border)}
+    .btn.primary{background:linear-gradient(135deg,var(--brand-1),var(--brand-2)); color:#fff; box-shadow:0 16px 40px rgba(255,81,0,.25)}
+    .btn.ghost{background:rgba(255,255,255,.04); color:var(--text)}
+    body.light .btn.ghost{background:rgba(0,0,0,.04)}
+
+    .meta{display:flex; gap:16px; font-size:13px; color:var(--muted); margin-top:8px}
+    .phone{position:relative; border-radius:22px; background:var(--card); padding:14px; box-shadow:0 12px 40px rgba(0,0,0,.35); border:1px solid var(--border); max-width:300px; margin:0 auto}
+    .phone img{width:100%; border-radius:16px; display:block; max-height:400px; object-fit:cover}
+
+    /* ====== Sections ====== */
+    .section{padding:40px 0}
+    .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+    .card{background:var(--card); border:1px solid var(--border); border-radius:18px; padding:16px}
+    .card h3{margin:0 0 6px; font-size:18px}
+    .card p{margin:0; color:var(--muted); font-size:14px}
+
+    /* ====== Screenshots ====== */
+    .shots{display:grid; grid-template-columns:repeat(4,1fr); gap:12px; max-width:900px; margin:0 auto}
+    .shot{border-radius:16px; overflow:hidden; background:#111; border:1px solid var(--border); transition: transform .3s, box-shadow .3s; max-width:180px}
+    .shot:hover{transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,.3)}
+    .shot img{display:block; width:100%; height:auto; max-height:320px; object-fit:cover}
+
+    /* ====== Legal Documents ====== */
+    .legal-docs{display:grid; grid-template-columns:repeat(2,1fr); gap:20px; max-width:600px; margin:0 auto}
+    .doc-card{background:var(--card); border:1px solid var(--border); border-radius:18px; padding:20px; text-align:center; transition: transform .3s, box-shadow .3s}
+    .doc-card:hover{transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2)}
+    .doc-card img{width:100%; max-width:200px; height:auto; border-radius:12px; margin-bottom:12px; border:1px solid var(--border)}
+    .doc-card h3{margin:0 0 8px; font-size:16px; color:var(--brand-1)}
+    .doc-card p{margin:0; font-size:14px; color:var(--muted)}
+
+    /* ====== Accordion FAQ ====== */
+    .accordion-item {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      background: var(--card);
+    }
+    .accordion-header {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 14px;
+      text-align: right;
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--text);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .accordion-header::after {
+      content: "+";
+      font-weight: bold;
+      transition: transform .3s;
+    }
+    .accordion-item.active .accordion-header::after {
+      content: "–";
+    }
+    .accordion-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .35s ease;
+      padding: 0 14px;
+      color: var(--muted);
+    }
+    .accordion-item.active .accordion-body {
+      max-height: 500px;
+      padding: 14px;
+    }
+
+    /* ====== Footer ====== */
+    footer{margin-top:40px}
+    .cta{display:flex; gap:12px; flex-wrap:wrap}
+    .foot-top{background:linear-gradient(135deg,var(--brand-1),var(--brand-2)); color:#fff}
+    .foot-top .wrap{display:grid; grid-template-columns:1fr 1fr; gap:20px; padding:24px 0}
+    .foot-top a{color:#fff; font-weight:800}
+    .foot-bottom{background:#2b0e00; color:#fff; text-align:center; padding:12px 0; font-weight:800}
+
+    /* ====== Lightbox ====== */
+    #lightbox{position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,.88); padding:20px; z-index:50; opacity:0; visibility:hidden; transition:.3s}
+    #lightbox.open{opacity:1; visibility:visible}
+    #lightbox img{max-width:95vw; max-height:85vh; border-radius:12px; box-shadow:0 24px 60px rgba(0,0,0,.5)}
+    #lightbox .close{position:absolute; bottom:24px; left:50%; transform:translateX(-50%); width:46px; height:46px; border-radius:50%; border:none; font-size:22px; cursor:pointer}
+
+    /* ====== Responsive ====== */
+    @media (max-width: 900px){
+      .hero .wrap{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr 1fr}
+      .shots{grid-template-columns:repeat(3,1fr)}
+      .phone{max-width:250px}
+      .legal-docs{grid-template-columns:1fr}
+    }
+    @media (max-width: 600px){
+      h1{font-size:26px}
+      .grid{grid-template-columns:1fr}
+      .shots{grid-template-columns:repeat(2,1fr)}
+      .phone{max-width:200px}
+      .shot{max-width:none}
+      .legal-docs{grid-template-columns:1fr}
+    }
+    @media (max-width: 400px){
+      .shots{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <!-- ====== Header ====== -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">
+          <img src="app_logo.jpg" alt="شعار وردلي تك" />
+        </div>
+        <div>وردلي تك</div>
+      </div>
+      <nav class="actions">
+        <a class="link" href="#features">الوثائق القانونية</a>
+        <a class="link" href="#faq">الأسئلة الشائعة</a>
+      <a href="سياسه الخصوصيه.html">سياسة الخصوصية</a>	
+        <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع">🌙</button>
+      </nav>
+    </div>
+  </header>
+<!-- ====== Hero ====== --><section class="hero">
+  <div class="container wrap">
+    <div>
+      <span class="badge">✔️ كيان قانوني ورسمي داخل مصر</span>
+      <h1>حمّل تطبيق <strong>وردلي تك</strong><br> لتسهيل التوريد وشحن الرصيد</h1>
+      <p class="lead">تطبيق يهدف لتسهيل عمليات الدفع الالكتروني في مصر</p>
+      <div class="actions">
+        <!-- زر تحميل التطبيق -->
+        <a class="btn primary" href="https://www.mediafire.com/file/es7ibyua8fljdfe/%25D9%2588%25D8%25B1%25D8%25AF%25D9%2584%25D9%258A_%25D8%25AA%25D9%2583.apk/file" target="_blank" rel="noopener">
+          📥 تحميل APK للأندرويد
+        </a>
+        
+        <!-- زر شرح التطبيق باللون الأحمر -->
+        <a class="btn ghost" href="https://www.youtube.com/@ana_w_talabat" target="_blank" rel="noopener"
+           style="background:#FF0000; color:#fff; border:none;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+               viewBox="0 0 16 16"
+               style="vertical-align: middle; margin-left: 6px;">
+            <path d="M8.051 1.999h-.002C3.73 2 2 3.728 2 7.949v.103c0 4.22 
+                     1.73 5.95 6.049 5.95h.002c4.32 0 
+                     6.049-1.73 6.049-5.95v-.103c0-4.221-1.729-5.95-6.049-5.95zM6.5 
+                     10.5v-5l4 2.5-4 2.5z"/>
+          </svg>
+          شرح التطبيق
+        </a>
+      </div>
+      <div class="meta">
+        <span>لا نطلب صلاحيات غير ضرورية</span>
+        <span>تنفيذ يدوي لضمان الأمان</span>
+      </div>
+    </div>
+    <div class="phone" aria-hidden="true">
+      <img src="photo.jpg" alt="لقطة من تطبيق وردلي تك"/>
+    </div>
+  </div>
+</section>
+
+  <!-- ====== Trust / Features ====== -->
+  <section id="features" class="section">
+    <div class="container">
+      <div class="grid">
+        <div class="card">
+          <h3>🧾 التزام قانوني كامل</h3>
+          <p>وردلي تك مش مجرد فكرة أو تطبيق لكنه كيان قانوني رسمي شغال في مصر، ومعاه سجل تجاري موثق + بطاقة ضريبية سارية</p>
+        </div>
+        <div class="card">
+          <h3>🔒 أمان البيانات</h3>
+          <p>نستخدم احدث تقنيات الحماية والتشفير لضمان أمان بياناتك والطلبات تُنفذ يدويًا لضمان الدقة والحفاظ على اموالك.</p>
+        </div>
+        <div class="card">
+          <h3>⚡ المميزات</h3>
+          <p>. عمولة منخفضة (0.5%) - إلغاء العمولة بمشاهدة إعلان قصير - دعم جميع المحافظ الإلكترونية - إيداع عن طريق ماكينة ATM - دعم فني متاح 24/7</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Legal Documents ====== -->
+  <section class="section">
+    <div class="container">
+      <h2 style="margin:0 0 20px; text-align:center">الوثائق القانونية</h2>
+      <p style="text-align:center; color:var(--muted); margin:0 0 24px">نحن كيان قانوني مرخص ومسجل رسمياً في جمهورية مصر العربية</p>
+      <div class="legal-docs">
+        <div class="doc-card">
+          <a class="lightbox-trigger" href="commercial_register.jpg">
+            <img src="commercial_register.jpg" alt="السجل التجاري لشركة وردلي تك" />
+          </a>
+          <h3>📋 السجل التجاري</h3>
+          <p>سجل تجاري ساري المفعول ومعتمد من الجهات الرسمية</p>
+        </div>
+        <div class="doc-card">
+          <a class="lightbox-trigger" href="tax_card.jpg">
+            <img src="tax_card.jpg" alt="البطاقة الضريبية لشركة وردلي تك" />
+          </a>
+          <h3>💳 البطاقة الضريبية</h3>
+          <p>بطاقة ضريبية سارية ومسجلة لدى مصلحة الضرائب المصرية</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- ====== Screenshots ====== -->
+<section class="section">
+  <div class="container">
+    <h2 style="margin:0 0 12px">صور من التطبيق</h2>
+    <div class="shots">
+      <a class="shot lightbox-trigger" href="photo_1.jpg"><img src="photo_1.jpg" alt="الشاشة الرئيسية لتطبيق وردلي تك"></a>
+      <a class="shot lightbox-trigger" href="photo_2.jpg"><img src="photo_2.jpg" alt="شاشة تسجيل الدخول"></a>
+      <a class="shot lightbox-trigger" href="photo_3.jpg"><img src="photo_3.jpg" alt="شاشة الخدمات المتاحة"></a>
+      <a class="shot lightbox-trigger" href="photo_4.jpg"><img src="photo_4.jpg" alt="شاشة التحويلات"></a>
+      <a class="shot lightbox-trigger" href="photo_5.jpg"><img src="photo_5.jpg" alt="شاشة شحن الرصيد"></a>
+      <a class="shot lightbox-trigger" href="photo_6.jpg"><img src="photo_6.jpg" alt="شاشة متابعة الطلبات"></a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .shots {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 صور في كل صف */
+    gap: 15px; /* مسافة بين الصور */
+  }
+  .shots img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s;
+  }
+  .shots img:hover {
+    transform: scale(1.05);
+  }
+</style>
+
+  <!-- ====== FAQ Accordion ====== -->
+  <section id="faq" class="section">
+    <div class="container">
+      <h2 style="margin:0 0 12px">الأسئلة الشائعة</h2>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-header">ما هو تطبيق وردلي تك؟</button>
+          <div class="accordion-body">
+            <p>تطبيق وردلي تك هو حل ذكي لتسهيل خدمات الدفع الإلكتروني في مصر. يمكنك من خلاله تحويل أموالك بسهولة وأمان.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">كيف أقوم بإنشاء حساب جديد؟</button>
+          <div class="accordion-body">
+            <ol>
+              <li>أدخل اسمك ورقم هاتفك في الشاشة الرئيسية</li>
+              <li>اضغط على "تفعيل حساب جديد"</li>
+              <li>اضغط على طلب كلمة السر لإرسال رسالة واتساب للإدارة</li>
+              <li>انتظر الرد برقم سري للتفعيل</li>
+              <li>أدخل الرقم السري لتفعيل حسابك</li>
+            </ol>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">نسيت الرقم السري، ماذا أفعل؟</button>
+          <div class="accordion-body">
+            <p>يمكنك:</p>
+            <ul>
+              <li>استخدام زر "تسجيل الدخول" من الشاشة الرئيسية</li>
+              <li>التواصل مع الدعم الفني عبر واتساب</li>
+              <li>طلب رقم سري جديد من الإدارة</li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">كم تبلغ العمولة؟</button>
+          <div class="accordion-body">
+            <p>العمولة هي 0.5% فقط من المبلغ المحول. يمكنك إلغاء العمولة بالكامل عبر مشاهدة إعلان قصير.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">ما هي المحافظ المدعومة؟</button>
+          <div class="accordion-body">
+            <p>ندعم جميع المحافظ الإلكترونية الشائعة مثل:<br>
+              فودافون كاش، أورنج كاش، اتصالات كاش، CIB، Smart Wallet، انستاباي،
+              وكذلك البنوك المختلفة.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- ====== Footer ====== -->
+<footer>
+  <div class="foot-top">
+    <div class="container wrap">
+      <div>
+        <h3 style="margin:0 0 8px">جاهز تبدأ؟</h3>
+        <p style="margin:0 0 14px">نزّل التطبيق وابدأ في ثوانٍ. لو احتجت مساعدة فريقنا موجود.</p>
+        <div class="cta">
+          <a class="btn primary" href="https://www.mediafire.com/file/es7ibyua8fljdfe/%25D9%2588%25D8%25B1%25D8%25AF%25D9%2584%25D9%258A_%25D8%25AA%25D9%2583.apk/file" target="_blank" rel="noopener">📥 تحميل التطبيق</a>
+          <a class="btn ghost" href="https://wa.me/201201937252" target="_blank" rel="noopener">💬 تواصل واتساب</a>
+          
+          <!-- زر مشاهدة الشرح -->
+          <a class="btn ghost" href="https://www.youtube.com/@ana_w_talabat" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16" style="vertical-align: middle; margin-left: 6px;">
+              <path d="M8.051 1.999h-.002C3.73 2 2 3.728 2 7.949v.103c0 4.22 1.73 5.95 6.049 5.95h.002c4.32 0 6.049-1.73 6.049-5.95v-.103c0-4.221-1.729-5.95-6.049-5.95zM6.5 10.5v-5l4 2.5-4 2.5z"/>
+            </svg>
+            شرح التطبيق
+          </a>
+        </div>
+      </div>
+      <div>
+        <strong>روابط مهمة</strong>
+        <ul style="margin:10px 0 0; padding:0; list-style:none">
+          <li><a href="سياسه الخصوصيه.html">سياسة الخصوصية</a></li>
+          <li><a href="#features">الوثائق القانونية</a></li>
+          <li><a href="#faq">الأسئلة الشائعة</a></li>
+          <li><a href="mailto:wardlytec@gmail.com">wardlytec@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bottom">© 2025 تطبيق وردلي تك – جميع الحقوق محفوظة</div>
+</footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" aria-hidden="true">
+    <img id="lightbox-img" alt="" />
+    <button class="close" aria-label="إغلاق">✕</button>
+  </div>
+
+  <script>
+    // Lightbox
+    document.addEventListener('click', function(e){
+      const t = e.target.closest('.lightbox-trigger');
+      if(!t) return;
+      e.preventDefault();
+      const lb = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      img.src = t.getAttribute('href');
+      lb.classList.add('open'); lb.setAttribute('aria-hidden','false');
+    });
+    document.querySelector('#lightbox .close').addEventListener('click', ()=>{
+      const lb = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      lb.classList.remove('open'); lb.setAttribute('aria-hidden','true');
+      setTimeout(()=> img.removeAttribute('src'), 250);
+    });
+    document.getElementById('lightbox').addEventListener('click', (e)=>{
+      if(e.target.id==='lightbox') document.querySelector('#lightbox .close').click();
+    });
+    document.addEventListener('keydown', (e)=>{
+      if(e.key==='Escape'){
+        const lb = document.getElementById('lightbox');
+        if(lb.classList.contains('open')){
+          document.querySelector('#lightbox .close').click();
+        }
+      }
+    });
+
+    // Accordion
+    document.querySelectorAll('.accordion-header').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const openItem = document.querySelector('.accordion-item.active');
+        if (openItem && openItem !== item) openItem.classList.remove('active');
+        item.classList.toggle('active');
+      });
+    });
+
+    // Theme toggle + remember choice
+    const THEME_KEY = 'wt-theme';
+    const toggleBtn = document.getElementById("themeToggle");
+    const savedTheme = localStorage.getItem(THEME_KEY) ||
+      (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    if(savedTheme === 'light'){ document.body.classList.add('light'); toggleBtn.textContent='☀️'; }
+
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("light");
+      const isLight = document.body.classList.contains("light");
+      toggleBtn.textContent = isLight ? "☀️" : "🌙";
+      localStorage.setItem(THEME_KEY, isLight ? 'light' : 'dark');
+    });
+  </script>
+</body>
+</html>

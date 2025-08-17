@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>سياسة الخصوصية - وردلي تك</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --brand-1: #ff5100;
+      --brand-2: #ff6a00;
+      --accent-light: #ffe2d6;
+      --footer-dark: #cc3e00;
+    }
+    *{box-sizing:border-box}
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+    }
+
+    header {
+      background: linear-gradient(to left, var(--brand-1), var(--brand-2));
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    header h1 { font-size: 28px; margin: 0; font-weight: 700; }
+
+    main {
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    }
+    h2 {
+      color: var(--brand-1);
+      border-bottom: 2px solid var(--accent-light);
+      padding-bottom: 8px;
+      font-size: 22px;
+      margin-top: 30px;
+      font-weight: 600;
+    }
+    section { margin-bottom: 25px; }
+    p { font-size: 16px; margin: 12px 0; }
+    ul { padding-right: 20px; margin: 8px 0 15px; }
+    ul li { margin-bottom: 8px; font-size: 15px; }
+
+    footer { font-size: 14px; text-align: center; color: white; }
+    .contact-footer {
+      background-color: var(--brand-1);
+      padding: 25px 15px 10px;
+    }
+    .contact-footer a { color: #fff; text-decoration: none; font-weight: 700; }
+    .contact-footer a:hover { text-decoration: underline; }
+    .contact-footer .privacy-link { text-decoration: underline; }
+
+    .rights-footer {
+      background-color: var(--footer-dark);
+      padding: 12px 15px;
+      font-weight: 700;
+    }
+
+    /* Lightbox */
+    #lightbox {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0,0,0,0.88);
+      padding: 20px;
+      z-index: 9999;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 320ms ease, visibility 320ms ease;
+    }
+    #lightbox.open { opacity: 1; visibility: visible; }
+    #lightbox .inner {
+      position: relative;
+      width: 100%;
+      max-width: 1100px;
+      border-radius: 12px;
+      text-align: center;
+    }
+    #lightbox img {
+      display: inline-block;
+      max-width: 100%;
+      max-height: 85vh;
+      border-radius: 10px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+      transform: translateY(8px) scale(.98);
+      opacity: 0;
+      transition: transform 360ms cubic-bezier(.2,.9,.32,1), opacity 360ms ease;
+    }
+    #lightbox.open img { transform: translateY(0) scale(1); opacity: 1; }
+
+    /* زر الإغلاق أسفل منتصف الصورة */
+    #lightbox .close {
+      position: absolute;
+      bottom: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff;
+      color: #222;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size: 24px;
+      cursor:pointer;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+      transition: transform 160ms ease, background 160ms ease, color 160ms ease;
+    }
+    #lightbox .close:hover { transform: translateX(-50%) scale(1.04); background: var(--brand-1); color: #fff; }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 22px; }
+      main { padding: 20px 15px; border-radius: 12px; margin: 20px; }
+      h2 { font-size: 20px; }
+      p, ul li { font-size: 14px; }
+      #lightbox .close { width: 40px; height: 40px; font-size: 20px; bottom: -50px; }
+     }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>وردلي تك - لتسهيل التوريد وشحن الرصيد</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>✅ التزام قانوني كامل</h2>
+      <p>وردلي تك مش مجرد فكرة أو تطبيق، لكنه كيان قانوني رسمي شغال في مصر، ومعاه:</p>
+      <ul>
+        <li>🧾 سجل تجاري موثق</li>
+        <li>🧾 بطاقة ضريبية سارية</li>
+      </ul>
+      <p>وده معناه إن أي تعامل من خلال التطبيق بيتم بشفافية كاملة، تحت إشراف قانوني، وبثقة تامة للمستخدم.</p>
+    </section>
+
+    <section>
+      <h2>1. البيانات التي يجمعها التطبيق</h2>
+      <p>تطبيق "وردلي تك" لا يقوم بجمع أي بيانات حساسة أو شخصية من المستخدمين بشكل تلقائي. يتم فقط استخدام البيانات التي يُدخلها المستخدم بنفسه مثل:</p>
+      <ul>
+        <li>الاسم أو رقم الهاتف (في حال تم إدخالهم يدويًا داخل الطلب)</li>
+        <li>تفاصيل عملية التوريد أو شحن الرصيد</li>
+      </ul>
+      <p>تُستخدم هذه البيانات فقط لتنفيذ الخدمة المطلوبة ولا يتم تخزينها أو استخدامها لأي غرض آخر.</p>
+    </section>
+
+    <section>
+      <h2>2. تنفيذ العمليات</h2>
+      <p>جميع العمليات داخل التطبيق (مثل التوريد أو الشحن) لا تتم بشكل تلقائي، بل يقوم التطبيق فقط بإرسال إشعار إلى المسؤول بوجود طلب جديد، ثم تُنفذ العملية يدويًا من قبل المسؤول المختص لضمان الأمان والدقة.</p>
+    </section>
+
+    <section>
+      <h2>3. الأذونات والصلاحيات</h2>
+      <p>تطبيق "وردلي تك" لا يطلب أي صلاحيات غير ضرورية، ولا يستخدم صلاحيات الجهاز مثل:</p>
+      <ul>
+        <li>الموقع الجغرافي</li>
+        <li>الكاميرا أو الميكروفون</li>
+        <li>جهات الاتصال</li>
+        <li>الملفات أو الصور</li>
+      </ul>
+      <p>إلا إذا تطلبت الخدمة ذلك بشكل واضح ووافق عليه المستخدم.</p>
+    </section>
+
+    <section>
+      <h2>4. مشاركة البيانات</h2>
+      <p>نؤكد أن بيانات المستخدم لا يتم مشاركتها مع أي طرف ثالث، ولا تُباع أو تُستخدم في أي أغراض تسويقية أو إعلانية.</p>
+    </section>
+
+    <section>
+      <h2>5. حماية البيانات</h2>
+      <p>نلتزم بحماية معلومات المستخدمين من أي وصول غير مصرح به، ونتعامل مع كافة الطلبات والبيانات بسرية تامة. جميع الاتصالات بين المستخدم والتطبيق تتم عبر وسائل آمنة.</p>
+    </section>
+
+    <section>
+      <h2>6. التعديلات على سياسة الخصوصية</h2>
+      <p>قد نقوم بتحديث سياسة الخصوصية من وقت لآخر، وسيتم إعلام المستخدم بأي تغييرات مهمة داخل التطبيق أو عبر وسائل التواصل المناسبة.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="contact-footer">
+      <p><strong>تواصل معنا</strong><br>
+      إذا كان لديك أي استفسار... </p>
+      <p>
+        البريد الإلكتروني: <a href="mailto:wardlytec@gmail.com">wardlytec@gmail.com</a><br>
+        راسلنا عبر: <a href="https://wa.me/201201937252" target="_blank">واتساب</a>
+      </p>
+      <p>
+        <a href="commercial_register.jpg" class="lightbox-trigger privacy-link">🧾 سجل تجاري موثق</a>
+        <a href="tax_card.jpg" class="lightbox-trigger privacy-link">🧾 بطاقة ضريبية سارية</a>
+      </p>
+    </div>
+    <div class="rights-footer">© 2025 تطبيق وردلي تك – جميع الحقوق محفوظة</div>
+  </footer>
+
+  <div id="lightbox">
+    <div class="inner">
+      <img id="lightbox-img" src="" alt="صورة سياسة الخصوصية" />
+      <button class="close" aria-label="إغلاق">×</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const triggers = document.querySelectorAll('.lightbox-trigger');
+      const lightbox = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lightbox-img');
+      const closeBtn = document.querySelector('#lightbox .close');
+
+      triggers.forEach(link => {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          lbImg.src = this.getAttribute('href');
+          lightbox.classList.add('open');
+          lightbox.setAttribute('aria-hidden', 'false');
+        });
+      });
+
+      function closeLightbox() {
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        setTimeout(() => { lbImg.src = ''; }, 320);
+      }
+      closeBtn.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+    });
+  </script>
+</body>
+</html>
