@@ -152,9 +152,11 @@
 
     .meta{
       display:flex;
+      flex-direction:column;
       justify-content:center;
-      margin-top:16px;
       align-items:center;
+      margin-top:16px;
+      gap:12px;
     }
 
     .phone{
@@ -638,6 +640,7 @@
       .nav .actions .link:last-of-type{
         border-bottom:none;
       }
+      .meta{gap:10px}
       .meta .badge{font-size:13px; padding:5px 8px}
     }
     @media (max-width: 600px){
@@ -651,6 +654,7 @@
       .legal-docs{grid-template-columns:1fr; gap:16px}
       .hero .actions{flex-direction:row; gap:12px; justify-content:center; flex-wrap:nowrap}
       .hero .actions .btn{text-align:center; flex:1; min-width:140px; max-width:180px}
+      .meta{gap:10px}
       .meta .badge{font-size:13px; padding:5px 8px}
       .foot-top .wrap{padding:30px 0}
       .foot-section h3{font-size:18px}
@@ -693,6 +697,7 @@
         padding:12px 8px;
         flex-shrink:0;
       }
+      .meta{gap:8px}
       .meta .badge{font-size:12px; padding:4px 6px; max-width:90%; text-align:center}
       .foot-top .wrap{grid-template-columns:1fr; gap:24px; padding:24px 0}
       .foot-section h3{font-size:16px}
@@ -820,6 +825,7 @@
       </div>
       <div class="meta">
         <span class="badge">💰 تسهيل توريد أموال شركات التوصيل - طلبات و مرسول</span>
+        <span class="badge">📱 اشحن رصيد خطك باستخدام اي محفظة كاش</span>
       </div>
     </div>
     <div class="phone">
