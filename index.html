@@ -4,33 +4,56 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>تحميل تطبيق وردلي تك – توريد وشحن بدون تعقيد</title>
-  <meta name="description" content="نزّل تطبيق وردلي تك للمندوبين في مصر. توريد الأموال وشحن الرصيد بسهولة وأمان.">
+  <meta name="description" content="حمّل تطبيق وردلي تك لتسهيل عمليات الدفع الإلكتروني في مصر. كيان قانوني مرخص مع عمولة منخفضة 0.5% ودعم جميع المحافظ الإلكترونية.">
+  <meta name="keywords" content="وردلي تك, تطبيق دفع إلكتروني, محافظ إلكترونية, فودافون كاش, أورنج كاش, اتصالات كاش, CIB, Smart Wallet, انستاباي, مصر, تحويل أموال, كيان قانوني">
+  <meta name="author" content="وردلي تك">
+  <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#ff5100">
+
   <!-- Open Graph -->
-  <meta property="og:title" content="تحميل تطبيق وردلي تك"/>
-  <meta property="og:description" content="توريد الأموال وشحن الرصيد بسهولة وأمان."/>
+  <meta property="og:title" content="تحميل تطبيق وردلي تك - تسهيل عمليات الدفع الإلكتروني"/>
+  <meta property="og:description" content="تطبيق يهدف لتسهيل عمليات الدفع الإلكتروني في مصر. كيان قانوني مرخص مع عمولة منخفضة ودعم جميع المحافظ الإلكترونية."/>
   <meta property="og:type" content="website"/>
   <meta property="og:locale" content="ar_EG"/>
   <meta property="og:image" content="photo_1.jpg"/>
+  <meta property="og:url" content="https://wardlytec.github.io/wardlytec-download-main/">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="تحميل تطبيق وردلي تك - تسهيل عمليات الدفع الإلكتروني">
+  <meta name="twitter:description" content="تطبيق يهدف لتسهيل عمليات الدفع الإلكتروني في مصر. كيان قانوني مرخص مع عمولة منخفضة ودعم جميع المحافظ الإلكترونية.">
+  <meta name="twitter:image" content="photo_1.jpg">
+
+  <!-- Preconnect للخطوط -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="app_logo.jpg">
   <style>
     :root{
       --brand-1:#ff5100;
       --brand-2:#ff6a00;
+      --brand-3:#ff8533;
 
       /* Dark (default) */
       --bg:#0f0f12;
-      --card:#17171b;
-      --text:#f1f1f1;
-      --muted:#cfcfcf;
-      --border: rgba(255,255,255,.06);
+      --card:#1a1a1f;
+      --text:#ffffff;
+      --muted:#b8b8b8;
+      --border: rgba(255,255,255,.12);
+      --shadow: rgba(0,0,0,.4);
+      --accent: rgba(255,81,0,.1);
     }
     body.light{
       --bg:#ffffff;
-      --card:#f5f5f5;
-      --text:#222222;
-      --muted:#555555;
-      --border: rgba(0,0,0,.08);
+      --card:#f8f9fa;
+      --text:#1a1a1a;
+      --muted:#6c757d;
+      --border: rgba(0,0,0,.12);
+      --shadow: rgba(0,0,0,.15);
+      --accent: rgba(255,81,0,.08);
     }
 
     *{box-sizing:border-box}
@@ -63,44 +86,113 @@
     /* زر الوضع */
     .theme-toggle{
       border:1px solid var(--border);
-      background:rgba(255,255,255,.08);
+      background:var(--accent);
       color:var(--text);
       font-size:16px;
       padding:8px 14px;
       border-radius:8px;
       cursor:pointer;
-      transition: background .3s, color .3s, border-color .3s;
+      transition: all .3s ease;
+      backdrop-filter:blur(10px);
     }
-    body.light .theme-toggle{ background:rgba(0,0,0,.06); }
+    .theme-toggle:hover{
+      background:var(--card);
+      border-color:var(--brand-1);
+      transform:translateY(-1px);
+    }
+    body.light .theme-toggle{
+      background:var(--accent);
+      border:1px solid var(--border);
+    }
 
     /* ====== Hero ====== */
     .hero{padding:56px 0 32px}
     .hero .wrap{display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:center}
-    .badge{display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border:1px solid var(--border); border-radius:999px; font-size:13px; background:rgba(255,255,255,.03)}
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 10px;
+      border:1px solid var(--border);
+      border-radius:999px;
+      font-size:13px;
+      background:var(--accent);
+      backdrop-filter:blur(10px);
+    }
     h1{font-size:34px; margin:12px 0 10px}
     .lead{font-size:18px; color:var(--muted); margin:0 0 22px}
-    .actions{display:flex; flex-wrap:wrap; gap:12px; align-items:center}
+    .actions{display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:flex-start}
     .btn{display:inline-flex; align-items:center; gap:10px; padding:14px 18px; border-radius:14px; text-decoration:none; font-weight:800; border:1px solid var(--border)}
     .btn.primary{background:linear-gradient(135deg,var(--brand-1),var(--brand-2)); color:#fff; box-shadow:0 16px 40px rgba(255,81,0,.25)}
-    .btn.ghost{background:rgba(255,255,255,.04); color:var(--text)}
-    body.light .btn.ghost{background:rgba(0,0,0,.04)}
+    .btn.ghost{
+      background:var(--accent);
+      color:var(--text);
+      border:1px solid var(--border);
+      backdrop-filter:blur(10px);
+    }
+    body.light .btn.ghost{
+      background:var(--accent);
+      border:1px solid var(--border);
+    }
 
-    .meta{display:flex; gap:16px; font-size:13px; color:var(--muted); margin-top:8px}
-    .phone{position:relative; border-radius:22px; background:var(--card); padding:14px; box-shadow:0 12px 40px rgba(0,0,0,.35); border:1px solid var(--border); max-width:300px; margin:0 auto}
-    .phone img{width:100%; border-radius:16px; display:block; max-height:400px; object-fit:cover}
+    .meta{
+      display:flex;
+      justify-content:center;
+      margin-top:16px;
+      align-items:center;
+    }
+
+    .phone{
+      position:relative;
+      max-width:300px;
+      margin:0 auto;
+    }
+    .phone .shot{
+      border-radius:16px;
+      overflow:hidden;
+      background:#111;
+      border:1px solid var(--border);
+      transition: transform .3s, box-shadow .3s;
+      display:block;
+    }
+    .phone .shot:hover{
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 12px 32px rgba(0,0,0,.3);
+    }
+    .phone .shot img{
+      display:block;
+      width:100%;
+      height:auto;
+      max-height:400px;
+      object-fit:cover;
+      border-radius:8px;
+      transition: transform .3s;
+    }
 
     /* ====== Sections ====== */
     .section{padding:40px 0}
     .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
-    .card{background:var(--card); border:1px solid var(--border); border-radius:18px; padding:16px}
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:20px;
+      box-shadow:0 4px 12px var(--shadow);
+      transition:all .3s ease;
+    }
+    .card:hover{
+      transform:translateY(-2px);
+      box-shadow:0 8px 24px var(--shadow);
+      border-color:var(--brand-1);
+    }
     .card h3{margin:0 0 6px; font-size:18px}
     .card p{margin:0; color:var(--muted); font-size:14px}
 
     /* ====== Screenshots ====== */
-    .shots{display:grid; grid-template-columns:repeat(4,1fr); gap:12px; max-width:900px; margin:0 auto}
-    .shot{border-radius:16px; overflow:hidden; background:#111; border:1px solid var(--border); transition: transform .3s, box-shadow .3s; max-width:180px}
-    .shot:hover{transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,.3)}
-    .shot img{display:block; width:100%; height:auto; max-height:320px; object-fit:cover}
+    .shots{display:grid; grid-template-columns:repeat(3,1fr); gap:15px; max-width:900px; margin:0 auto}
+    .shot{border-radius:16px; overflow:hidden; background:#111; border:1px solid var(--border); transition: transform .3s, box-shadow .3s}
+    .shot:hover{transform: translateY(-4px) scale(1.02); box-shadow: 0 12px 32px rgba(0,0,0,.3)}
+    .shot img{display:block; width:100%; height:auto; max-height:320px; object-fit:cover; border-radius:8px; transition: transform .3s}
 
     /* ====== Legal Documents ====== */
     .legal-docs{display:grid; grid-template-columns:repeat(2,1fr); gap:20px; max-width:600px; margin:0 auto}
@@ -154,17 +246,294 @@
 
     /* ====== Footer ====== */
     footer{margin-top:40px}
-    .cta{display:flex; gap:12px; flex-wrap:wrap}
-    .foot-top{background:linear-gradient(135deg,var(--brand-1),var(--brand-2)); color:#fff}
-    .foot-top .wrap{display:grid; grid-template-columns:1fr 1fr; gap:20px; padding:24px 0}
-    .foot-top a{color:#fff; font-weight:800}
-    .foot-bottom{background:#2b0e00; color:#fff; text-align:center; padding:12px 0; font-weight:800}
+    .cta{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+      margin-top:8px;
+      justify-content:center;
+      align-items:center;
+    }
+    .foot-top .btn{
+      position:relative;
+      overflow:hidden;
+      box-shadow:0 4px 15px rgba(0,0,0,0.2);
+      border:1px solid rgba(255,255,255,0.2);
+      white-space:nowrap;
+    }
+    .foot-top .btn::before{
+      content:'';
+      position:absolute;
+      top:0;
+      left:-100%;
+      width:100%;
+      height:100%;
+      background:linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition:left .5s ease;
+    }
+    .foot-top .btn:hover::before{
+      left:100%;
+    }
+    .foot-top .btn.primary{
+      background:linear-gradient(135deg, #fff, #ffeb3b);
+      color:var(--brand-1);
+      font-weight:800;
+      box-shadow:0 6px 20px rgba(255,235,59,0.3);
+    }
+    .foot-top .btn.primary:hover{
+      transform:translateY(-2px);
+      box-shadow:0 8px 25px rgba(255,235,59,0.4);
+    }
+    .foot-top .btn.ghost{
+      background:rgba(255,255,255,0.1);
+      backdrop-filter:blur(10px);
+      border:1px solid rgba(255,255,255,0.3);
+      white-space:nowrap;
+    }
+    .foot-top .btn.ghost:hover{
+      background:rgba(255,255,255,0.2);
+      transform:translateY(-2px);
+    }
+    .foot-top{
+      background:
+        linear-gradient(135deg, var(--brand-1) 0%, var(--brand-2) 50%, #ff8533 100%),
+        radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%);
+      color:#fff;
+      position:relative;
+      overflow:hidden;
+    }
+    .foot-top::before{
+      content:'';
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      height:1px;
+      background:linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    }
+    .foot-top .wrap{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:40px 0;
+      position:relative;
+      z-index:1;
+      text-align:center;
+    }
+    .foot-top a{
+      color:#fff;
+      font-weight:600;
+      text-decoration:none;
+      transition: all .3s ease;
+      position:relative;
+    }
+    .foot-top a:hover{
+      color:#ffeb3b;
+      transform:translateX(4px);
+    }
+    .foot-top a::before{
+      content:'';
+      position:absolute;
+      bottom:-2px;
+      left:0;
+      width:0;
+      height:2px;
+      background:#ffeb3b;
+      transition:width .3s ease;
+    }
+    .foot-top a:hover::before{
+      width:100%;
+    }
+    .foot-section{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+    }
+    .foot-section h3{
+      margin:0 0 20px;
+      font-size:20px;
+      font-weight:700;
+      background:linear-gradient(45deg, #fff, #ffeb3b);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+      text-shadow:0 2px 4px rgba(0,0,0,0.1);
+    }
+    .foot-section h4{
+      margin:0 0 16px;
+      font-size:16px;
+      font-weight:600;
+      color:rgba(255,255,255,0.95);
+      display:flex;
+      align-items:center;
+      gap:8px;
+      justify-content:center;
+    }
+    .foot-section h4::before,
+    .foot-section h4::after{
+      content:'';
+      width:30px;
+      height:1px;
+      background:linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    }
+    .foot-section p{
+      margin:0 0 20px;
+      line-height:1.7;
+      color:rgba(255,255,255,0.9);
+      font-size:15px;
+    }
+
+    .foot-bottom{
+      background:
+        linear-gradient(135deg, #1a0600, #2b0e00, #3d1400);
+      color:#fff;
+      text-align:center;
+      padding:20px 0;
+      font-weight:600;
+      border-top:1px solid rgba(255,255,255,0.1);
+      position:relative;
+    }
+    .foot-bottom::before{
+      content:'';
+      position:absolute;
+      top:0;
+      left:50%;
+      transform:translateX(-50%);
+      width:100px;
+      height:1px;
+      background:linear-gradient(90deg, transparent, var(--brand-1), transparent);
+    }
+
+    /* تحسينات بصرية للأيقونات */
+    .foot-section li a[href*="mailto"]::before{
+      content:'📧';
+      margin-left:4px;
+      filter:drop-shadow(0 0 4px rgba(255,235,59,0.5));
+      animation:pulse 2s infinite;
+    }
+    .foot-section li a[href*="wa.me"]::before{
+      content:'📱';
+      margin-left:4px;
+      filter:drop-shadow(0 0 4px rgba(37,211,102,0.5));
+      animation:bounce 2s infinite;
+    }
+    .foot-section li a[href*="youtube"]::before{
+      content:'📺';
+      margin-left:4px;
+      filter:drop-shadow(0 0 4px rgba(255,0,0,0.5));
+      animation:glow 3s infinite;
+    }
+
+    /* أنيميشن للأيقونات */
+    @keyframes pulse {
+      0%, 100% { transform:scale(1); }
+      50% { transform:scale(1.1); }
+    }
+    @keyframes bounce {
+      0%, 100% { transform:translateY(0); }
+      50% { transform:translateY(-3px); }
+    }
+    @keyframes glow {
+      0%, 100% { filter:drop-shadow(0 0 4px rgba(255,0,0,0.5)); }
+      50% { filter:drop-shadow(0 0 8px rgba(255,0,0,0.8)); }
+    }
+
+    /* توحيد الألوان للوضع الفاتح مع المظلم */
+    body.light .foot-top{
+      background:
+        linear-gradient(135deg, var(--brand-1) 0%, var(--brand-2) 50%, var(--brand-3) 100%),
+        radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%);
+      color:#fff;
+    }
+    body.light .foot-bottom{
+      background:linear-gradient(135deg, #1a0600, #2b0e00, #3d1400);
+      color:#fff;
+    }
+    body.light .foot-top .btn.primary{
+      background:linear-gradient(135deg, #fff, #ffeb3b);
+      color:var(--brand-1);
+      box-shadow:0 6px 20px rgba(255,235,59,0.3);
+    }
+    body.light .foot-top .btn.primary:hover{
+      box-shadow:0 8px 25px rgba(255,235,59,0.4);
+    }
+    body.light .foot-top .btn.ghost{
+      background:rgba(255,255,255,0.1);
+      backdrop-filter:blur(10px);
+      border:1px solid rgba(255,255,255,0.3);
+      color:#fff;
+    }
+    body.light .foot-top .btn.ghost:hover{
+      background:rgba(255,255,255,0.2);
+    }
+
+    /* توحيد النصوص والعناوين في الفوتر */
+    body.light .foot-section h3{
+      background:linear-gradient(45deg, #fff, #ffeb3b);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+      text-shadow:0 2px 4px rgba(0,0,0,0.1);
+    }
+    body.light .foot-section h4{
+      color:rgba(255,255,255,0.95);
+    }
+    body.light .foot-section p{
+      color:rgba(255,255,255,0.9);
+    }
+    body.light .foot-top a{
+      color:#fff;
+    }
+    body.light .foot-top a:hover{
+      color:#ffeb3b;
+    }
+
+    /* تحسينات إضافية للوضع الفاتح */
+    body.light .nav{
+      background:rgba(255,255,255,0.95);
+      backdrop-filter:blur(10px);
+    }
+    body.light .phone .shot{
+      background:var(--card);
+      box-shadow:0 4px 12px var(--shadow);
+    }
+    body.light .doc-card{
+      background:var(--card);
+      box-shadow:0 4px 12px var(--shadow);
+    }
+    body.light .accordion-item{
+      background:var(--card);
+      box-shadow:0 2px 8px var(--shadow);
+    }
 
     /* ====== Lightbox ====== */
-    #lightbox{position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,.88); padding:20px; z-index:50; opacity:0; visibility:hidden; transition:.3s}
+    #lightbox{
+      position:fixed;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:rgba(0,0,0,.92);
+      backdrop-filter:blur(8px);
+      padding:20px;
+      z-index:50;
+      opacity:0;
+      visibility:hidden;
+      transition:all .3s ease;
+    }
     #lightbox.open{opacity:1; visibility:visible}
     #lightbox img{max-width:95vw; max-height:85vh; border-radius:12px; box-shadow:0 24px 60px rgba(0,0,0,.5)}
     #lightbox .close{position:absolute; bottom:24px; left:50%; transform:translateX(-50%); width:46px; height:46px; border-radius:50%; border:none; font-size:22px; cursor:pointer}
+
+    /* Mobile Controls */
+    .mobile-controls{
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
 
     /* Mobile Menu Button */
     .mobile-menu-btn{
@@ -199,8 +568,19 @@
       transform: rotate(-45deg) translate(6px, -6px);
     }
 
+    /* ====== Responsive ====== */
+    @media (max-width: 900px){
+      .hero .wrap{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr 1fr}
+      .shots{grid-template-columns:repeat(2,1fr)}
+      .phone{max-width:250px}
+      .legal-docs{grid-template-columns:1fr}
+      .section{padding:30px 0}
+    }
+
     @media (max-width: 768px){
       .mobile-menu-btn{display:flex}
+      .theme-toggle{display:block}
       .nav .actions{
         position:absolute;
         top:100%;
@@ -234,65 +614,9 @@
         background:rgba(255,255,255,.05);
       }
       .nav .actions .link:last-of-type{
-        border-bottom:1px solid var(--border);
-      }
-      .nav .actions .theme-toggle{
-        margin:16px 20px;
-        align-self:center;
-        max-width:120px;
-        border:none;
-      }
-    }
-
-    /* ====== Responsive ====== */
-    @media (max-width: 900px){
-      .hero .wrap{grid-template-columns:1fr}
-      .grid{grid-template-columns:1fr 1fr}
-      .shots{grid-template-columns:repeat(2,1fr)}
-      .phone{max-width:250px}
-      .legal-docs{grid-template-columns:1fr}
-      .section{padding:30px 0}
-    }
-    @media (max-width: 768px){
-      .mobile-menu-btn{display:flex}
-      .nav .actions{
-        position:absolute;
-        top:100%;
-        left:0;
-        right:0;
-        background:var(--card);
-        border:1px solid var(--border);
-        border-top:none;
-        flex-direction:column;
-        gap:0;
-        transform:translateY(-100%);
-        opacity:0;
-        visibility:hidden;
-        transition: all .3s;
-        z-index:10;
-      }
-      .nav .actions.active{
-        transform:translateY(0);
-        opacity:1;
-        visibility:visible;
-      }
-      .nav .actions .link{
-        padding:16px 20px;
-        border-bottom:1px solid var(--border);
-        text-align:center;
-        transition: background .3s;
-      }
-      .nav .actions .link:hover{
-        background:rgba(255,255,255,.05);
-      }
-      .nav .actions .link:last-of-type{
         border-bottom:none;
       }
-      .nav .actions .theme-toggle{
-        margin:16px 20px;
-        align-self:center;
-        max-width:120px;
-      }
+      .meta .badge{font-size:13px; padding:5px 8px}
     }
     @media (max-width: 600px){
       h1{font-size:24px; line-height:1.3}
@@ -302,11 +626,14 @@
       .phone{max-width:220px}
       .shot{max-width:none}
       .legal-docs{grid-template-columns:1fr; gap:16px}
-      .hero .actions{flex-direction:column; gap:12px}
-      .hero .actions .btn{text-align:center; width:100%}
-      .foot-top .wrap{grid-template-columns:1fr; gap:20px}
-      .cta{flex-direction:column; gap:10px}
-      .cta .btn{width:100%; text-align:center}
+      .hero .actions{flex-direction:row; gap:12px; justify-content:center; flex-wrap:wrap}
+      .hero .actions .btn{text-align:center; flex:1; min-width:160px; max-width:200px}
+      .meta .badge{font-size:13px; padding:5px 8px}
+      .foot-top .wrap{padding:30px 0}
+      .foot-section h3{font-size:18px}
+      .cta{gap:12px}
+      .cta{flex-direction:row; gap:12px; justify-content:flex-start; flex-wrap:wrap}
+      .cta .btn{flex:1; min-width:140px; max-width:180px; text-align:center}
       .section{padding:25px 0}
       .container{padding-inline:16px}
     }
@@ -316,13 +643,26 @@
       h1{font-size:20px; line-height:1.4}
       h2{font-size:18px}
       .btn{font-size:14px; padding:14px 20px}
-      .theme-toggle{font-size:14px; padding:8px 16px}
+      .theme-toggle{font-size:14px; padding:6px 10px}
+      .mobile-controls{gap:6px}
       .badge{font-size:12px; padding:4px 8px}
       .lead{font-size:16px}
       .section{padding:20px 0}
       .card{padding:14px}
       .card h3{font-size:16px}
       .card p{font-size:13px}
+
+      /* في الشاشات الصغيرة جداً، اجعل الأزرار عمودية */
+      .hero .actions{flex-direction:column; gap:10px}
+      .hero .actions .btn{width:100%; max-width:none}
+      .meta .badge{font-size:12px; padding:4px 6px; max-width:90%; text-align:center}
+      .foot-top .wrap{grid-template-columns:1fr; gap:24px; padding:24px 0}
+      .foot-section h3{font-size:16px}
+      .foot-section p{font-size:14px}
+      .cta{flex-direction:column; gap:10px}
+      .cta .btn{width:100%; max-width:none}
+      .foot-top .btn{font-size:14px; padding:12px 16px}
+
     }
 
     /* إضافة smooth scrolling */
@@ -341,6 +681,33 @@
       transform: translateY(-2px);
       box-shadow: 0 8px 25px rgba(255,81,0,.35);
     }
+
+    /* تحسين الأداء */
+    .shot, .doc-card, .btn {
+      will-change: transform;
+    }
+
+    /* تحسين التباين للوصولية */
+    @media (prefers-contrast: high) {
+      :root {
+        --border: rgba(255,255,255,.2);
+      }
+      body.light {
+        --border: rgba(0,0,0,.2);
+      }
+    }
+
+    /* تقليل الحركة للمستخدمين الذين يفضلون ذلك */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      html {
+        scroll-behavior: auto;
+      }
+    }
   </style>
 </head>
 <body>
@@ -352,22 +719,24 @@
       </div>
       <div>وردلي تك</div>
     </div>
-    
-    <!-- Mobile Menu Button -->
-    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="فتح القائمة">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    
+
     <nav class="actions">
       <a class="link" href="#features">الوثائق القانونية</a>
       <a class="link" href="#faq">الأسئلة الشائعة</a>
-      <a class="link" href="https://wardlytec.github.io/wardly-privacy-policy/" target="_blank" rel="noopener">
+      <a class="link" href="https://wardlytec.github.io/wardly-privacy-policy/" target="_blank" rel="noopener noreferrer">
         سياسة الخصوصية
-      </a>	
-      <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع">🌙</button>
+      </a>
     </nav>
+
+    <!-- Mobile Controls -->
+    <div class="mobile-controls">
+      <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع">🌙</button>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="فتح القائمة">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </div>
 </header>
 
@@ -375,16 +744,16 @@
   <div class="container wrap">
     <div>
       <span class="badge">✔️ كيان قانوني ورسمي داخل مصر</span>
-      <h1>حمّل تطبيق <strong>وردلي تك</strong><br> لتسهيل التوريد وشحن الرصيد</h1>
+      <h1>تطبيق <strong>وردلي تك</strong><br> لتسهيل التوريد وشحن الرصيد</h1>
       <p class="lead">تطبيق يهدف لتسهيل عمليات الدفع الالكتروني في مصر</p>
       <div class="actions">
         <!-- زر تحميل التطبيق -->
-        <a class="btn primary" href="https://www.mediafire.com/file/es7ibyua8fljdfe/%25D9%2588%25D8%25B1%25D8%25AF%25D9%2584%25D9%258A_%25D8%25AA%25D9%2583.apk/file" target="_blank" rel="noopener">
+        <a class="btn primary" href="https://www.mediafire.com/file/es7ibyua8fljdfe/%25D9%2588%25D8%25B1%25D8%25AF%25D9%2584%25D9%258A_%25D8%25AA%25D9%2583.apk/file" target="_blank" rel="noopener noreferrer">
           📥 تحميل للأندرويد
         </a>
         
         <!-- زر شرح التطبيق باللون الأحمر -->
-        <a class="btn ghost" href="https://www.youtube.com/@ana_w_talabat" target="_blank" rel="noopener"
+        <a class="btn ghost" href="https://www.youtube.com/@ana_w_talabat" target="_blank" rel="noopener noreferrer"
            style="background:#FF0000; color:#fff; border:none;">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
                viewBox="0 0 16 16"
@@ -398,12 +767,13 @@
         </a>
       </div>
       <div class="meta">
-        <span>لا نطلب صلاحيات غير ضرورية</span>
-        <span>تنفيذ يدوي لضمان الأمان</span>
+        <span class="badge">💰 توريد فوري لأموال شركات التوصيل - طلبات و مرسول</span>
       </div>
     </div>
-    <div class="phone" aria-hidden="true">
-      <img src="photo.jpg" alt="لقطة من تطبيق وردلي تك" loading="lazy"/>
+    <div class="phone">
+      <a class="shot lightbox-trigger" href="photo.jpg">
+        <img src="photo.jpg" alt="لقطة من تطبيق وردلي تك" loading="lazy"/>
+      </a>
     </div>
   </div>
 </section>
@@ -466,22 +836,7 @@
   </div>
 </section>
 
-<style>
-  .shots {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 صور في كل صف */
-    gap: 15px; /* مسافة بين الصور */
-  }
-  .shots img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s;
-  }
-  .shots img:hover {
-    transform: scale(1.05);
-  }
-</style>
+
 
   <!-- ====== FAQ Accordion ====== -->
   <section id="faq" class="section">
@@ -539,34 +894,27 @@
 <footer>
   <div class="foot-top">
     <div class="container wrap">
-      <div>
-        <h3 style="margin:0 0 8px">جاهز تبدأ؟</h3>
-        <p style="margin:0 0 14px">نزّل التطبيق وابدأ في ثوانٍ. لو احتجت مساعدة فريقنا موجود.</p>
+      <!-- القسم الرئيسي -->
+      <div class="foot-section">
+        <h3>🚀 جاهز تبدأ؟</h3>
+        <p>نزّل تطبيق وردلي تك وابدأ في تحويل أموالك بسهولة وأمان. فريق الدعم الفني متاح لمساعدتك على مدار الساعة.</p>
         <div class="cta">
-          <a class="btn primary" href="https://www.mediafire.com/file/es7ibyua8fljdfe/%25D9%2588%25D8%25B1%25D8%25AF%25D9%2584%25D9%258A_%25D8%25AA%25D9%2583.apk/file" target="_blank" rel="noopener">📥 تحميل التطبيق</a>
-          <a class="btn ghost" href="https://wa.me/201201937252" target="_blank" rel="noopener">💬 تواصل واتساب</a>
-          
-          <!-- زر مشاهدة الشرح -->
-          <a class="btn ghost" href="https://www.youtube.com/@ana_w_talabat" target="_blank" rel="noopener">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16" style="vertical-align: middle; margin-left: 6px;">
-              <path d="M8.051 1.999h-.002C3.73 2 2 3.728 2 7.949v.103c0 4.22 1.73 5.95 6.049 5.95h.002c4.32 0 6.049-1.73 6.049-5.95v-.103c0-4.221-1.729-5.95-6.049-5.95zM6.5 10.5v-5l4 2.5-4 2.5z"/>
-            </svg>
-            شرح التطبيق
+          <a class="btn primary" href="https://www.mediafire.com/file/es7ibyua8fljdfe/%25D9%2588%25D8%25B1%25D8%25AF%25D9%2584%25D9%258A_%25D8%25AA%25D9%2583.apk/file" target="_blank" rel="noopener noreferrer">
+            📥 تحميل التطبيق
+          </a>
+          <a class="btn ghost" href="https://wa.me/201201937252" target="_blank" rel="noopener noreferrer">
+            💬 تواصل واتساب
           </a>
         </div>
       </div>
-      <div>
-        <strong>روابط مهمة</strong>
-        <ul style="margin:10px 0 0; padding:0; list-style:none">
-          <li><a href="https://wardlytec.github.io/wardly-privacy-policy/" target="_blank" rel="noopener">سياسة الخصوصية</a></li>
-          <li><a href="#features">الوثائق القانونية</a></li>
-          <li><a href="#faq">الأسئلة الشائعة</a></li>
-          <li><a href="mailto:wardlytec@gmail.com">wardlytec@gmail.com</a></li>
-        </ul>
-      </div>
+
+
+
     </div>
   </div>
-  <div class="foot-bottom">© 2025 تطبيق وردلي تك – جميع الحقوق محفوظة</div>
+  <div class="foot-bottom">
+    © 2025 تطبيق وردلي تك – جميع الحقوق محفوظة
+  </div>
 </footer>
 
   <!-- Lightbox -->
@@ -576,6 +924,24 @@
   </div>
 
   <script>
+    // تحسين الأداء - تأجيل تحميل الصور
+    document.addEventListener('DOMContentLoaded', function() {
+      const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+      if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              img.src = img.src;
+              img.classList.remove('lazy');
+              observer.unobserve(img);
+            }
+          });
+        });
+        lazyImages.forEach(img => imageObserver.observe(img));
+      }
+    });
+
     // Lightbox
     document.addEventListener('click', function(e){
       const t = e.target.closest('.lightbox-trigger');
@@ -647,8 +1013,7 @@
       });
 
       // Close menu when clicking outside
-      d
-ocument.addEventListener("click", (e) => {
+      document.addEventListener("click", (e) => {
         if(!mobileMenuBtn.contains(e.target) && !navActions.contains(e.target)) {
           mobileMenuBtn.classList.remove("active");
           navActions.classList.remove("active");
@@ -663,6 +1028,23 @@ ocument.addEventListener("click", (e) => {
         }
       });
     }
+
+    // تحسين الأداء - تحميل الخطوط بشكل أفضل
+    if ('fonts' in document) {
+      document.fonts.ready.then(() => {
+        document.body.classList.add('fonts-loaded');
+      });
+    }
+
+    // إضافة مؤشر التحميل للروابط الخارجية
+    document.querySelectorAll('a[target="_blank"]').forEach(link => {
+      link.addEventListener('click', function() {
+        this.style.opacity = '0.7';
+        setTimeout(() => {
+          this.style.opacity = '1';
+        }, 1000);
+      });
+    });
   </script>
 </body>
 </html>
